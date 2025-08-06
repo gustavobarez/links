@@ -23,21 +23,29 @@
   }
 }
 .identity {
-  h1,
-  p {
+  h1, p.typing-text {
     margin: 0;
+    padding: 0;
+    text-indent: 0;
   }
+
   h1 {
     font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
   }
-  p {
+
+  p.typing-text {
     color: var(--mat-sys-color-on-surface-variant);
     min-height: 1.5rem;
+    line-height: 1.2;
   }
+
   @media (max-width: 768px) {
     text-align: center;
   }
 }
+
 .controls {
   display: flex;
   align-items: center;
@@ -98,10 +106,7 @@
 
   @media (hover: hover) and (pointer: fine) {
     ::ng-deep .mat-mdc-list-item:hover {
-      background-color: rgb(255, 8, 8) !important;
-      @media (prefers-color-scheme: dark) {
-        background-color: rgba(255, 255, 255, 0.05) !important;
-      }
+      background-color: rgba(0, 0, 0, 0.04) !important;
 
       .hover-text {
         opacity: 1;
@@ -118,6 +123,10 @@
         transform: translateX(0) scale(1);
       }
     }
+  }
+
+  :host-context(.dark-theme) ::ng-deep .mat-mdc-list-item:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
   }
 
   a {
@@ -190,7 +199,7 @@
 }
 ::ng-deep .online-chip.mat-mdc-chip[disabled] {
   border: 1px solid #28a745 !important;
-  background-color: transparent !important;
+  background-color: #e0eee3 !important;
   opacity: 1 !important;
   height: 28px !important;
   padding-right: 0 !important;
@@ -210,6 +219,10 @@
     margin-left: 0px;
     animation: pulse 1.5s infinite;
   }
+}
+
+:host-context(.dark-theme) ::ng-deep .online-chip.mat-mdc-chip[disabled] {
+  background-color: #1a2e1f !important;
 }
 @keyframes pulse {
   0% {
