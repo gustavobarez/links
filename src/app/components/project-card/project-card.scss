@@ -1,26 +1,30 @@
 :host {
   display: block;
-  font-family: sans-serif;
 }
 
 .project-card {
   max-width: 600px;
-  border-radius: 0;
   border: 1px solid #e0e0e0;
-  box-shadow: none !important;
+  font-family: sans-serif;
   display: flex;
   flex-direction: column;
 }
 
-mat-card-header {
+.card-section {
+  padding: 16px 24px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 24px;
+  border-top: none;
 }
 
-.header-spacer {
-  flex: 1 1 auto;
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
 .project-tags {
@@ -38,34 +42,22 @@ mat-card-header {
   user-select: text;
 }
 
-mat-card-content {
-  padding: 16px 24px;
-  border-top: 1px solid #e0e0e0;
-}
-
-mat-card-content p {
+.card-content p {
   color: rgba(0, 0, 0, 0.6);
   line-height: 1.5;
   margin: 0;
 }
 
-.image-container {
-  display: block;
-  width: 100%;
-  border-top: 1px solid #e0e0e0;
-  margin-bottom: 0 !important;
-}
-
-.image-container img[mat-card-image] {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 !important;
-}
-
-mat-card-actions {
+.card-image-container {
   padding: 0;
-  margin: 0;
+}
+
+.card-image-container img {
+  display: block;
+  width: 100%;
+}
+
+.card-actions {
   display: flex;
   align-items: stretch;
   border-top: 1px solid #e0e0e0;
