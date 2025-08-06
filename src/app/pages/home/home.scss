@@ -17,6 +17,10 @@
   align-items: center;
   width: 100%;
   margin-bottom: 3rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 .identity {
   h1,
@@ -30,17 +34,33 @@
     color: var(--mat-sys-color-on-surface-variant);
     min-height: 1.5rem;
   }
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 }
 .controls {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
+.flag-button {
+  width: 32px;
+  height: 32px;
+  min-width: 32px !important;
+  border: none;
+  background: none;
+  padding: 0 !important;
+  cursor: pointer;
+  font-size: 20px;
+}
 .bio {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   color: var(--mat-sys-color-on-surface-variant);
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 }
 .links-list {
   width: 100%;
@@ -70,7 +90,7 @@
     gap: 0;
   }
   .hover-text {
-    color: #888;
+    color: var(--mat-sys-color-primary);
     font-weight: 500;
     opacity: 0;
     white-space: nowrap;
@@ -93,12 +113,20 @@
   margin-top: 8px;
   padding-top: 8px;
   border-top: 1px solid var(--mat-sys-color-outline-variant);
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 }
 .contact-info {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 5px;
+  @media (max-width: 768px) {
+    align-items: center;
+  }
 }
 .email {
   display: inline-flex;
