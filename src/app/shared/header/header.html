@@ -1,0 +1,16 @@
+<header class="links-header">
+  <div class="identity">
+    <h1>{{ name }}</h1>
+    <p class="typing-text">{{ title }}</p>
+  </div>
+  <div class="controls">
+    <button mat-button routerLink="/projects">/projects</button>
+    <button mat-button routerLink="/articles">/articles</button>
+    <button mat-icon-button (click)="themeToggled.emit()" aria-label="Mudar tema">
+      <mat-icon>{{ isDarkMode ? "light_mode" : "dark_mode" }}</mat-icon>
+    </button>
+    <button class="flag-button" (click)="languageToggled.emit()">
+      {{ currentLang === "en" ? "🇧🇷" : "🇺🇸" }}
+    </button>
+  </div>
+</header>

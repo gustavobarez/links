@@ -7,7 +7,7 @@ import { MatListModule } from '@angular/material/list';
 import { RouterLink } from '@angular/router';
 import { Theme } from '../../services/theme';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { Header } from '../../shared/header/header';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -19,6 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatListModule,
     MatChipsModule,
     FontAwesomeModule,
+    Header,
   ],
   templateUrl: './home.html',
   styleUrl: './home.scss',

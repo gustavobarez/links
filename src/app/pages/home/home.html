@@ -1,22 +1,12 @@
 <div class="home-container">
-  <header class="links-header">
-    <div class="identity">
-      <h1>{{ content.name }}</h1>
-      <p class="typing-text">{{ currentTitle }}</p>
-    </div>
-    <div class="controls">
-      <button mat-button routerLink="/projects">/projects</button>
-      <button mat-button routerLink="/articles">/articles</button>
-      <button mat-icon-button (click)="toggleTheme()" aria-label="Mudar tema">
-        <mat-icon>{{
-          theme.isDarkMode() ? "light_mode" : "dark_mode"
-        }}</mat-icon>
-      </button>
-      <button class="flag-button" (click)="toggleLanguage()">
-        {{ currentLang === "en" ? "🇧🇷" : "🇺🇸" }}
-      </button>
-    </div>
-  </header>
+  <app-header
+    [name]="content.name"
+    [title]="currentTitle"
+    [isDarkMode]="theme.isDarkMode()"
+    [currentLang]="currentLang"
+    (themeToggled)="toggleTheme()"
+    (languageToggled)="toggleLanguage()"
+  ></app-header>
 
   <p class="bio">{{ content.bio }}</p>
 

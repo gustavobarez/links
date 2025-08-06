@@ -1,9 +1,11 @@
 :host {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   min-height: 100vh;
+  padding-top: 8vh;
+  box-sizing: border-box;
 }
 .home-container {
   width: 100%;
