@@ -1,5 +1,3 @@
-// src/app/services/theme.service.ts
-
 import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 
 @Injectable({
