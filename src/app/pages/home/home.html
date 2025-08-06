@@ -17,37 +17,51 @@
       </button>
     </div>
   </header>
+
   <p class="bio">{{ content.bio }}</p>
+
   <mat-list class="links-list">
     <mat-list-item>
       <a
         matListItemLine
-        href="https://linkedin.com/gustavobarez"
+        href="https://www.linkedin.com/in/gustavo-barez/"
         target="_blank"
       >
-        <mat-icon matListItemIcon>link</mat-icon>
-        <span class="link-text">Linkedin</span>
+        <fa-icon matListItemIcon [icon]="['fab', 'linkedin']"></fa-icon>
+        <span class="link-text">LinkedIn</span>
         <span class="hover-text">{{ content.linkedinDetails }}</span>
       </a>
-      <mat-icon matListItemMeta>launch</mat-icon>
+      <span matListItemMeta class="arrow-icon-container">
+        <mat-icon class="default-icon">arrow_outward</mat-icon>
+        <mat-icon class="hover-icon">arrow_forward</mat-icon>
+      </span>
     </mat-list-item>
+
     <mat-list-item>
       <a matListItemLine href="https://github.com/gustavobarez" target="_blank">
-        <mat-icon matListItemIcon>link</mat-icon>
+        <fa-icon matListItemIcon [icon]="['fab', 'github']"></fa-icon>
         <span class="link-text">GitHub</span>
         <span class="hover-text">{{ content.githubDetails }}</span>
       </a>
-      <mat-icon matListItemMeta>launch</mat-icon>
+      <span matListItemMeta class="arrow-icon-container">
+        <mat-icon class="default-icon">arrow_outward</mat-icon>
+        <mat-icon class="hover-icon">arrow_forward</mat-icon>
+      </span>
     </mat-list-item>
+
     <mat-list-item>
       <a matListItemLine href="https://dev.to/gustavobarez" target="_blank">
-        <mat-icon matListItemIcon>link</mat-icon>
+        <fa-icon matListItemIcon [icon]="['fas', 'newspaper']"></fa-icon>
         <span class="link-text">My Articles</span>
         <span class="hover-text">{{ content.articlesDetails }}</span>
       </a>
-      <mat-icon matListItemMeta>launch</mat-icon>
+      <span matListItemMeta class="arrow-icon-container">
+        <mat-icon class="default-icon">arrow_outward</mat-icon>
+        <mat-icon class="hover-icon">arrow_forward</mat-icon>
+      </span>
     </mat-list-item>
   </mat-list>
+
   <footer class="contact-footer">
     <div class="contact-info">
       <a class="email" href="mailto:gustavobarez@gmail.com">

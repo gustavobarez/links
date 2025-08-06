@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { RouterLink } from '@angular/router';
 import { Theme } from '../../services/theme';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,7 @@ import { Theme } from '../../services/theme';
     MatIconModule,
     MatListModule,
     MatChipsModule,
+    FontAwesomeModule,
   ],
   templateUrl: './home.html',
   styleUrl: './home.scss',

@@ -64,6 +64,7 @@
 }
 .links-list {
   width: 100%;
+
   ::ng-deep .mat-mdc-list-item {
     border: 1px solid #6666;
     height: auto;
@@ -71,16 +72,54 @@
     transition: background-color 0.3s ease-in-out;
     cursor: pointer;
   }
-  ::ng-deep .mat-mdc-list-item:hover {
-    background-color: rgb(255, 8, 8) !important;
-    @media (prefers-color-scheme: dark) {
-      background-color: rgba(255, 255, 255, 0.05) !important;
+
+  .arrow-icon-container {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+
+  .arrow-icon-container .mat-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+  }
+
+  .default-icon {
+    opacity: 1;
+    transform: translateX(-5px) scale(1);
+  }
+
+  .hover-icon {
+    opacity: 0;
+    transform: translateX(-5px) scale(0.7);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    ::ng-deep .mat-mdc-list-item:hover {
+      background-color: rgb(255, 8, 8) !important;
+      @media (prefers-color-scheme: dark) {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+      }
+
+      .hover-text {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .default-icon {
+        opacity: 0;
+        transform: translateX(0) scale(0.7);
+      }
+
+      .hover-icon {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+      }
     }
   }
-  ::ng-deep .mat-mdc-list-item:hover .hover-text {
-    opacity: 1;
-    transform: translateX(0);
-  }
+
   a {
     display: flex;
     align-items: center;
@@ -89,18 +128,24 @@
     width: 100%;
     gap: 0;
   }
+
   .hover-text {
-    color: var(--mat-sys-color-primary);
+    color: #888;
     font-weight: 500;
     opacity: 0;
     white-space: nowrap;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translateX(-20px);
-    transition: all 0.3s ease;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
+
   span {
     margin-left: 1rem;
   }
+
   .mat-mdc-list-item-meta {
     color: var(--mat-sys-color-on-surface-variant);
   }
