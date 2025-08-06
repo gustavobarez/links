@@ -2,7 +2,7 @@
   <header class="links-header">
     <div class="identity">
       <h1>{{ content.name }}</h1>
-      <p>{{ content.title }}</p>
+      <p class="typing-text">{{ currentTitle }}</p>
     </div>
     <div class="controls">
       <button mat-button routerLink="/projects">/projects</button>
@@ -17,9 +17,7 @@
       </button>
     </div>
   </header>
-
   <p class="bio">{{ content.bio }}</p>
-
   <mat-list class="links-list">
     <mat-list-item>
       <a
@@ -33,7 +31,6 @@
       </a>
       <mat-icon matListItemMeta>launch</mat-icon>
     </mat-list-item>
-
     <mat-list-item>
       <a matListItemLine href="https://github.com/gustavobarez" target="_blank">
         <mat-icon matListItemIcon>link</mat-icon>
@@ -42,7 +39,6 @@
       </a>
       <mat-icon matListItemMeta>launch</mat-icon>
     </mat-list-item>
-
     <mat-list-item>
       <a matListItemLine href="https://dev.to/gustavobarez" target="_blank">
         <mat-icon matListItemIcon>link</mat-icon>
@@ -52,7 +48,6 @@
       <mat-icon matListItemMeta>launch</mat-icon>
     </mat-list-item>
   </mat-list>
-
   <footer class="contact-footer">
     <div class="contact-info">
       <a class="email" href="mailto:gustavobarez@gmail.com">
@@ -63,7 +58,6 @@
         <mat-chip class="online-chip" disabled>Online</mat-chip>
       </mat-chip-set>
     </div>
-
     <a
       mat-stroked-button
       class="cv-button"
