@@ -1,0 +1,14 @@
+.project-container {
+  padding: 24px;
+}
+
+h1 {
+  margin-bottom: 24px;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}

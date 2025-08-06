@@ -1,0 +1,79 @@
+:host {
+  display: block;
+  font-family: sans-serif;
+}
+
+.project-card {
+  max-width: 600px;
+  border-radius: 0;
+  border: 1px solid #e0e0e0;
+  box-shadow: none !important;
+}
+
+mat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+}
+
+.header-spacer {
+  flex: 1 1 auto;
+}
+
+.project-tags {
+  display: flex;
+  gap: 8px;
+}
+
+.project-tags mat-chip {
+  font-size: 13px;
+  padding: 4px 8px !important;
+  min-height: 26px !important;
+  height: auto !important;
+  border: 1px solid #e0e0e0 !important;
+  background-color: transparent !important;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.project-tags mat-chip:hover {
+  cursor: default;
+}
+
+mat-card-content {
+  padding: 16px 24px;
+}
+
+mat-card-content p {
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.5;
+  margin: 0;
+}
+
+img[mat-card-image] {
+  border-radius: 0;
+}
+
+mat-card-actions {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer-button {
+  flex: 1;
+  border-radius: 0;
+  padding: 16px 0;
+  margin: 0;
+}
+
+.footer-button mat-icon {
+  margin-right: 8px;
+}
+
+.vertical-separator {
+  width: 1px;
+  height: 24px;
+  background-color: #e0e0e0;
+}
