@@ -8,6 +8,8 @@
   border-radius: 0;
   border: 1px solid #e0e0e0;
   box-shadow: none !important;
+  display: flex;
+  flex-direction: column;
 }
 
 mat-card-header {
@@ -26,22 +28,19 @@ mat-card-header {
   gap: 8px;
 }
 
-.project-tags mat-chip {
+.tech-tag {
   font-size: 13px;
-  padding: 4px 8px !important;
-  min-height: 26px !important;
-  height: auto !important;
-  border: 1px solid #e0e0e0 !important;
-  background-color: transparent !important;
-  color: rgba(0, 0, 0, 0.87);
-}
-
-.project-tags mat-chip:hover {
-  cursor: default;
+  padding: 4px 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  line-height: 1;
+  cursor: text;
+  user-select: text;
 }
 
 mat-card-content {
   padding: 16px 24px;
+  border-top: 1px solid #e0e0e0;
 }
 
 mat-card-content p {
@@ -50,22 +49,36 @@ mat-card-content p {
   margin: 0;
 }
 
-img[mat-card-image] {
-  border-radius: 0;
+.image-container {
+  display: block;
+  width: 100%;
+  border-top: 1px solid #e0e0e0;
+  margin-bottom: 0 !important;
+}
+
+.image-container img[mat-card-image] {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 !important;
 }
 
 mat-card-actions {
   padding: 0;
   margin: 0;
   display: flex;
-  align-items: center;
+  align-items: stretch;
+  border-top: 1px solid #e0e0e0;
 }
 
 .footer-button {
   flex: 1;
   border-radius: 0;
-  padding: 16px 0;
   margin: 0;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-button mat-icon {
@@ -74,6 +87,5 @@ mat-card-actions {
 
 .vertical-separator {
   width: 1px;
-  height: 24px;
   background-color: #e0e0e0;
 }
