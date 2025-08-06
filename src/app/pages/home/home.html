@@ -1,0 +1,77 @@
+<div class="home-container">
+  <header class="links-header">
+    <div class="identity">
+      <h1>{{ content.name }}</h1>
+      <p>{{ content.title }}</p>
+    </div>
+    <div class="controls">
+      <button mat-button routerLink="/projects">/projects</button>
+      <button mat-button routerLink="/articles">/articles</button>
+      <button mat-icon-button (click)="toggleTheme()" aria-label="Mudar tema">
+        <mat-icon>{{
+          theme.isDarkMode() ? "light_mode" : "dark_mode"
+        }}</mat-icon>
+      </button>
+      <button mat-button class="language-button" (click)="toggleLanguage()">
+        {{ currentLang === "en" ? "PT" : "EN" }}
+      </button>
+    </div>
+  </header>
+
+  <p class="bio">{{ content.bio }}</p>
+
+  <mat-list class="links-list">
+    <mat-list-item>
+      <a
+        matListItemLine
+        href="https://linkedin.com/gustavobarez"
+        target="_blank"
+      >
+        <mat-icon matListItemIcon>link</mat-icon>
+        <span class="link-text">Linkedin</span>
+        <span class="hover-text">{{ content.linkedinDetails }}</span>
+      </a>
+      <mat-icon matListItemMeta>launch</mat-icon>
+    </mat-list-item>
+
+    <mat-list-item>
+      <a matListItemLine href="https://github.com/gustavobarez" target="_blank">
+        <mat-icon matListItemIcon>link</mat-icon>
+        <span class="link-text">GitHub</span>
+        <span class="hover-text">{{ content.githubDetails }}</span>
+      </a>
+      <mat-icon matListItemMeta>launch</mat-icon>
+    </mat-list-item>
+
+    <mat-list-item>
+      <a matListItemLine href="https://dev.to/gustavobarez" target="_blank">
+        <mat-icon matListItemIcon>link</mat-icon>
+        <span class="link-text">My Articles</span>
+        <span class="hover-text">{{ content.articlesDetails }}</span>
+      </a>
+      <mat-icon matListItemMeta>launch</mat-icon>
+    </mat-list-item>
+  </mat-list>
+
+  <footer class="contact-footer">
+    <div class="contact-info">
+      <a class="email" href="mailto:gustavobarez@gmail.com">
+        <span>gustavobarez@gmail.com</span>
+        <mat-icon>send</mat-icon>
+      </a>
+      <mat-chip-set>
+        <mat-chip class="online-chip" disabled>Online</mat-chip>
+      </mat-chip-set>
+    </div>
+
+    <a
+      mat-stroked-button
+      class="cv-button"
+      href="/caminho/para/cv.pdf"
+      target="_blank"
+    >
+      {{ content.cvButton }}
+      <mat-icon>download</mat-icon>
+    </a>
+  </footer>
+</div>

@@ -1,0 +1,15 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #121212;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+}
