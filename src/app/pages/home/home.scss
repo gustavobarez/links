@@ -60,6 +60,20 @@
   padding: 0 !important;
   cursor: pointer;
   font-size: 20px;
+  
+  @media (hover: hover) and (pointer: fine) and (min-width: 769px) {
+    &:hover {
+      background: rgba(0, 0, 0, 0.04) !important;
+    }
+  }
+}
+
+:host-context(.dark-theme) .flag-button {
+  @media (hover: hover) and (pointer: fine) and (min-width: 769px) {
+    &:hover {
+      background: rgba(255, 255, 255, 0.05) !important;
+    }
+  }
 }
 .bio {
   font-size: 1rem;
@@ -104,7 +118,7 @@
     transform: translateX(-5px) scale(0.7);
   }
 
-  @media (hover: hover) and (pointer: fine) {
+  @media (hover: hover) and (pointer: fine) and (min-width: 769px) {
     ::ng-deep .mat-mdc-list-item:hover {
       background-color: rgba(0, 0, 0, 0.04) !important;
 
@@ -125,8 +139,10 @@
     }
   }
 
-  :host-context(.dark-theme) ::ng-deep .mat-mdc-list-item:hover {
-    background-color: rgba(255, 255, 255, 0.05) !important;
+  @media (hover: hover) and (pointer: fine) and (min-width: 769px) {
+    :host-context(.dark-theme) ::ng-deep .mat-mdc-list-item:hover {
+      background-color: rgba(255, 255, 255, 0.05) !important;
+    }
   }
 
   a {
