@@ -1,9 +1,11 @@
 .links-header {
+  padding-top: 2vh;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  
+  margin-bottom: 3rem;
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 1rem;
@@ -11,7 +13,8 @@
 }
 
 .identity {
-  h1, p.typing-text {
+  h1,
+  p.typing-text {
     margin: 0;
     padding: 0;
     text-indent: 0;
@@ -57,7 +60,7 @@
   padding: 0 !important;
   cursor: pointer;
   font-size: 20px;
-  
+
   @media (hover: hover) and (pointer: fine) and (min-width: 769px) {
     &:hover {
       background: rgba(0, 0, 0, 0.04) !important;
@@ -70,5 +73,15 @@
     &:hover {
       background: rgba(255, 255, 255, 0.05) !important;
     }
+  }
+}
+
+.typing-text {
+  border-right: 2px solid var(--mat-sys-color-on-surface-variant);
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
 }

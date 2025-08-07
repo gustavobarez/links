@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, inject, computed } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
@@ -8,6 +8,7 @@ import { RouterLink } from '@angular/router';
 import { Theme } from '../../services/theme';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Header } from '../../shared/header/header';
+import { Language } from '../../services/language';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -24,16 +25,9 @@ import { Header } from '../../shared/header/header';
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
-export class Home implements OnInit, OnDestroy {
-  textData: any = {
+export class Home {
+  private textData = {
     pt: {
-      name: 'Gustavo Barez',
-      titles: [
-        'Engenheiro de Software',
-        'Desenvolvedor Full Stack',
-        'Desenvolvedor Frontend',
-        'Desenvolvedor Backend',
-      ],
       bio: 'Brasileiro obcecado por tecnologia há uma década. Trabalhando como Engenheiro de Software.',
       linkedinDetails: 'veja minha carreira',
       githubDetails: 'acompanhe meus projetos',
@@ -41,13 +35,6 @@ export class Home implements OnInit, OnDestroy {
       cvButton: 'Baixe meu CV',
     },
     en: {
-      name: 'Gustavo Barez',
-      titles: [
-        'Software Engineer',
-        'Full Stack Developer',
-        'Frontend Developer',
-        'Backend Developer',
-      ],
       bio: 'Brazilian obsessed with technology for a decade. Working as a Software Engineer.',
       linkedinDetails: 'see my career',
       githubDetails: 'follow my projects',
@@ -55,67 +42,9 @@ export class Home implements OnInit, OnDestroy {
       cvButton: 'Download my CV',
     },
   };
-  currentLang: 'pt' | 'en' = 'en';
-  content = this.textData.en;
-  currentTitle: string = '';
-  currentTitleIndex: number = 0;
-  currentCharIndex: number = 0;
-  isTyping: boolean = true;
-  typingInterval: any;
+  public theme = inject(Theme);
+  public language = inject(Language);
 
-  constructor(public theme: Theme) {}
+  public content = computed(() => this.textData[this.language.currentLang()]);
 
-  ngOnInit(): void {
-    const savedLang = localStorage.getItem('language') as 'pt' | 'en';
-    if (savedLang) {
-      this.currentLang = savedLang;
-      this.content = this.textData[this.currentLang];
-    }
-    this.startTypingAnimation();
-  }
-
-  ngOnDestroy(): void {
-    if (this.typingInterval) {
-      clearInterval(this.typingInterval);
-    }
-  }
-
-  startTypingAnimation(): void {
-    this.typingInterval = setInterval(() => {
-      if (this.isTyping) {
-        if (
-          this.currentCharIndex <
-          this.content.titles[this.currentTitleIndex].length
-        ) {
-          this.currentTitle +=
-            this.content.titles[this.currentTitleIndex][this.currentCharIndex];
-          this.currentCharIndex++;
-        } else {
-          this.isTyping = false;
-          setTimeout(() => {
-            if (!this.isTyping) {
-              this.isTyping = true;
-              this.currentTitle = '';
-              this.currentCharIndex = 0;
-              this.currentTitleIndex =
-                (this.currentTitleIndex + 1) % this.content.titles.length;
-            }
-          }, 2000);
-        }
-      }
-    }, 100);
-  }
-
-  toggleTheme(): void {
-    this.theme.toggleTheme();
-  }
-
-  toggleLanguage(): void {
-    this.currentLang = this.currentLang === 'en' ? 'pt' : 'en';
-    this.content = this.textData[this.currentLang];
-    localStorage.setItem('language', this.currentLang);
-    this.currentTitle = '';
-    this.currentCharIndex = 0;
-    this.isTyping = true;
-  }
 }
