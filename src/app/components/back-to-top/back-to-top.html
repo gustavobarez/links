@@ -1,0 +1,23 @@
+@if (isVisible()) {
+<div class="back-to-top-container">
+  <button
+    mat-stroked-button
+    class="desktop-button"
+    (click)="scrollToTop()"
+    aria-label="Voltar ao topo da página"
+  >
+    <span>Back to Top</span>
+    <mat-icon>arrow_upward</mat-icon>
+  </button>
+
+  <button
+    mat-fab
+    color="primary"
+    class="mobile-button"
+    (click)="scrollToTop()"
+    aria-label="Voltar ao topo da página"
+  >
+    <mat-icon>keyboard_arrow_up</mat-icon>
+  </button>
+</div>
+}

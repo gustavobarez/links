@@ -1,0 +1,44 @@
+.back-to-top-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.desktop-button {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-button {
+    display: none;
+  }
+
+  .desktop-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 8px;
+    padding: 8px 16px;
+    background-color: var(--mat-sys-color-on-surface-container-high);
+
+    --mat-stroked-button-outline-color: var(--mat-sys-color-outline);
+    --mat-stroked-button-label-text-color: var(--mat-sys-color-on-surface);
+    --mat-stroked-button-disabled-label-text-color: var(
+      --mat-sys-color-on-surface
+    );
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
