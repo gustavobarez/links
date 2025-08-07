@@ -10,15 +10,39 @@
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
+  }
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @media (max-width: 768px) {
+    position: relative;
+    width: 100%;
+    justify-content: center;
   }
 }
 
 .back-button {
-  position: absolute;
-  top: 50%;
-  right: 100%;
-  margin-right: 24px;
-  transform: translateY(-50%);
+  @media (min-width: 769px) {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-right: 24px;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .back-button {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .identity {

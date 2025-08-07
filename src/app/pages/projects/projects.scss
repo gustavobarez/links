@@ -1,8 +1,12 @@
 .project-container {
   width: 100%;
   max-width: 650px;
-  padding: 2rem;
   box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+
 }
 
 h1 {
