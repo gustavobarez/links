@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ProjectCard } from '../../components/project-card/project-card';
+import { ProjectCard } from '../../shared/project-card/project-card';
 import { Header } from '../../shared/header/header';
-import { BackToTop } from '../../components/back-to-top/back-to-top';
+import { BackToTop } from '../../shared/back-to-top/back-to-top';
 
 @Component({
   selector: 'app-projects',

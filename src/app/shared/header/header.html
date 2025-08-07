@@ -12,7 +12,7 @@
 
     <div class="identity">
       <h1>Gustavo Barez</h1>
-      <p class="typing-text">{{ displayedTitle() }}</p>
+      <p class="typing-text">{{ typing.displayedTitle() }}</p>
     </div>
   </div>
   <div class="controls">
@@ -25,8 +25,8 @@
     >
       <mat-icon>{{ theme.isDarkMode() ? "light_mode" : "dark_mode" }}</mat-icon>
     </button>
-    <button class="flag-button" (click)="language.toggleLanguage()">
-      {{ language.currentLang() === "en" ? "🇧🇷" : "🇺🇸" }}
+    <button class="flag-button" (click)="languageService.toggleLanguage()">
+      {{ languageService.currentLang() === "en" ? "🇧🇷" : "🇺🇸" }}
     </button>
   </div>
 </header>

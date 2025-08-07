@@ -1,14 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, OnDestroy, inject, computed } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { RouterLink } from '@angular/router';
-import { Theme } from '../../services/theme';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Header } from '../../shared/header/header';
-import { Language } from '../../services/language';
+import { LanguageService } from '../../shared/language.service';
+import { Theme } from '../../shared/theme.service';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -43,8 +43,9 @@ export class Home {
     },
   };
   public theme = inject(Theme);
-  public language = inject(Language);
+  public languageService = inject(LanguageService);
 
-  public content = computed(() => this.textData[this.language.currentLang()]);
-
+  public content = computed(
+    () => this.textData[this.languageService.currentLang()]
+  );
 }

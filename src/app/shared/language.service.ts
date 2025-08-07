@@ -5,7 +5,7 @@ export type SelectedLanguage = 'en' | 'pt';
 @Injectable({
   providedIn: 'root',
 })
-export class Language {
+export class LanguageService {
   private document = inject(DOCUMENT);
   private languageState = signal<SelectedLanguage>('en');
   public currentLang = this.languageState.asReadonly();
