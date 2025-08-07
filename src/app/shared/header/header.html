@@ -1,4 +1,11 @@
 <header class="links-header">
+  <button *ngIf="showBackButton"
+  mat-icon-button
+  class="back-button"
+  routerLink="/"
+  aria-label="Voltar para a página inicial">
+  <mat-icon>arrow_back</mat-icon>
+  </button>
   <div class="identity">
     <h1>Gustavo Barez</h1>
     <p class="typing-text">{{ displayedTitle() }}</p>

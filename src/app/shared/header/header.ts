@@ -23,6 +23,8 @@ import { Language } from '../../services/language';
   styleUrl: './header.scss',
 })
 export class Header implements OnInit, OnDestroy {
+  @Input() showBackButton: boolean = false;
+  
   private textData = {
     pt: {
       titles: [
