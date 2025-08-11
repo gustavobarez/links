@@ -92,6 +92,18 @@
   text-decoration: none;
   color: var(--mat-sys-color-primary);
   border-radius: 0;
+
+  @media (hover: hover) and (pointer: fine) and (min-width: 769px) {
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) and (min-width: 769px) {
+    :host-context(.dark-theme) &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  }
 }
 
 .footer-button svg {
