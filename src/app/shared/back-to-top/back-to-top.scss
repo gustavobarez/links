@@ -19,10 +19,12 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-
     border-radius: 8px;
     padding: 8px 16px;
-    background-color: var(--mat-sys-color-on-surface-container-high);
+    background-color: var(--mat-sys-color-surface-container-high);
+    color: var(--mat-sys-color-on-surface);
+    border: 1px solid var(--mat-divider-color);
+    cursor: pointer;
 
     --mat-stroked-button-outline-color: var(--mat-sys-color-outline);
     --mat-stroked-button-label-text-color: var(--mat-sys-color-on-surface);
