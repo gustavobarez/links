@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BackToTop } from './back-to-top';
+import { HeaderComponent } from './header.component';
 
-describe('BackToTop', () => {
-  let component: BackToTop;
-  let fixture: ComponentFixture<BackToTop>;
+describe('HeaderComponent', () => {
+  let component: HeaderComponent;
+  let fixture: ComponentFixture<HeaderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BackToTop]
-    })
-    .compileComponents();
+      imports: [HeaderComponent],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(BackToTop);
+    fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -6,7 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { Header } from '../../shared/header/header';
+import { HeaderComponent } from '../../shared/header/header.component';
 import { LanguageService } from '../../shared/language.service';
 import { Theme } from '../../shared/theme.service';
 @Component({
@@ -20,12 +20,12 @@ import { Theme } from '../../shared/theme.service';
     MatListModule,
     MatChipsModule,
     FontAwesomeModule,
-    Header,
+    HeaderComponent,
   ],
-  templateUrl: './home.html',
-  styleUrl: './home.scss',
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.scss',
 })
-export class Home {
+export class HomeComponent {
   private textData = {
     pt: {
       bio: 'Brasileiro obcecado por tecnologia há uma década. Trabalhando como Engenheiro de Software.',

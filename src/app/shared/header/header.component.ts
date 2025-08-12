@@ -11,10 +11,10 @@ import { TypingEffectService } from '../typing-effect.service';
   selector: 'app-header',
   standalone: true,
   imports: [CommonModule, MatButtonModule, MatIconModule, RouterModule],
-  templateUrl: './header.html',
-  styleUrl: './header.scss',
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.scss',
 })
-export class Header {
+export class HeaderComponent {
   @Input() showBackButton: boolean = false;
   public theme = inject(Theme);
   public languageService = inject(LanguageService);

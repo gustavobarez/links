@@ -5,10 +5,10 @@ import { MatIcon } from '@angular/material/icon';
   selector: 'app-back-to-top',
   standalone: true,
   imports: [MatIcon],
-  templateUrl: './back-to-top.html',
-  styleUrl: './back-to-top.scss',
+  templateUrl: './back-to-top.component.html',
+  styleUrl: './back-to-top.component.scss',
 })
-export class BackToTop {
+export class BackToTopComponent {
   isVisible = signal(false);
 
   @HostListener('window:scroll', [])

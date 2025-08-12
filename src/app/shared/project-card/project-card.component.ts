@@ -5,7 +5,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   selector: 'app-project-card',
   standalone: true,
   imports: [FontAwesomeModule],
-  templateUrl: './project-card.html',
-  styleUrl: './project-card.scss',
+  templateUrl: './project-card.component.html',
+  styleUrl: './project-card.component.scss',
 })
-export class ProjectCard {}
+export class ProjectCardComponent {}

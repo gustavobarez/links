@@ -6,7 +6,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   selector: 'app-article-card',
   standalone: true,
   imports: [FontAwesomeModule, MatIconModule],
-  templateUrl: './article-card.html',
-  styleUrl: './article-card.scss',
+  templateUrl: './article-card.component.html',
+  styleUrl: './article-card.component.scss',
 })
-export class ArticleCard {}
+export class ArticleCardComponent {}
