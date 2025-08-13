@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { Project } from '../translation.service';
 
 @Component({
   selector: 'app-project-card',
@@ -8,4 +9,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.scss',
 })
-export class ProjectCardComponent {}
+export class ProjectCardComponent {
+  @Input({required: true}) project!: Project;
+}

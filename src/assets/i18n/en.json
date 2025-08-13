@@ -1,0 +1,34 @@
+{
+  "home": {
+    "bio": "Brazilian obsessed with technology for a decade. Working as a Software Engineer.",
+    "linkedinDetails": "see my career",
+    "githubDetails": "follow my projects",
+    "articlesDetails": "see my articles",
+    "cvButton": "Download my CV"
+  },
+  "projects": {
+    "title": "Projects",
+    "items": [
+      {
+        "id": 1,
+        "title": "css2wind",
+        "description": "Learn TailwindCSS by playing a minigame: there are eight CSS properties that you must translate to the equivalent TailwindCSS utility. Bet you can't get 8/8.",
+        "technologies": ["TypeScript", "TailwindCSS", "Next.js"],
+        "image": "https://i.imgur.com/k9Hh5Yy.png",
+        "websiteLink": "https://css2wind.com",
+        "codeLink": "https://github.com/usuario/css2wind"
+      }
+    ]
+  },
+  "articles": {
+    "title": "Articles",
+    "items": [
+      {
+        "id": 1,
+        "title": "How to use Angular Signals",
+        "summary": "Complete guide about Angular's new feature",
+        "link": "https://medium.com/@usuario/angular-signals"
+      }
+    ]
+  }
+}

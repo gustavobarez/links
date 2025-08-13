@@ -6,9 +6,11 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faCodeBranch, faEarthAmericas, faNewspaper } from '@fortawesome/free-solid-svg-icons';
 
 import { routes } from './app.routes';
+import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideHttpClient(),
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
