@@ -1,5 +1,5 @@
 .links-header {
-  padding-top: 2vh;
+  padding-top: 5vh;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -29,8 +29,8 @@
 .back-button {
   @media (min-width: 769px) {
     position: absolute;
-    top: 50%;
-    right: 100%;
+    top: 60%;
+    right: 96%;
     margin-right: 24px;
     transform: translateY(-50%);
   }

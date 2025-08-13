@@ -1,9 +1,7 @@
 .home-container {
   width: 100%;
   max-width: 650px;
-  padding: 2rem;
   box-sizing: border-box;
-
   @media (max-width: 768px) {
     padding: 1rem 0.5rem;
     width: 100%;

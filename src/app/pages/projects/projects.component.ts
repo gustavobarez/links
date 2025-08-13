@@ -8,7 +8,7 @@ import { TranslationService } from '../../shared/translation.service';
   selector: 'app-projects',
   imports: [ProjectCardComponent, HeaderComponent, BackToTopComponent],
   template: `
-    <app-header></app-header>
+    <app-header [showBackButton]="true"></app-header>
     @if (translationService.isLoading()) {
     <div class="loading">Carregando...</div>
     } @else {
@@ -23,7 +23,7 @@ import { TranslationService } from '../../shared/translation.service';
       </div>
     </div>
     }
-  <app-back-to-top></app-back-to-top>
+    <app-back-to-top></app-back-to-top>
   `,
   styleUrl: './projects.component.scss',
 })
