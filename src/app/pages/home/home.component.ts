@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, computed, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
@@ -9,6 +9,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { LanguageService } from '../../shared/language.service';
 import { Theme } from '../../shared/theme.service';
+import { TranslationService } from '../../shared/translation.service';
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -26,26 +28,11 @@ import { Theme } from '../../shared/theme.service';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  private textData = {
-    pt: {
-      bio: 'Brasileiro obcecado por tecnologia há uma década. Trabalhando como Engenheiro de Software.',
-      linkedinDetails: 'veja minha carreira',
-      githubDetails: 'acompanhe meus projetos',
-      articlesDetails: 'veja meus artigos',
-      cvButton: 'Baixe meu CV',
-    },
-    en: {
-      bio: 'Brazilian obsessed with technology for a decade. Working as a Software Engineer.',
-      linkedinDetails: 'see my career',
-      githubDetails: 'follow my projects',
-      articlesDetails: 'see my articles',
-      cvButton: 'Download my CV',
-    },
-  };
   public theme = inject(Theme);
   public languageService = inject(LanguageService);
+  public translationService = inject(TranslationService);
 
-  public content = computed(
-    () => this.textData[this.languageService.currentLang()]
-  );
+  get homeData() {
+    return this.translationService.home();
+  }
 }

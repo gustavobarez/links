@@ -1,7 +1,7 @@
 <div class="home-container">
   <app-header></app-header>
 
-  <p class="bio">{{ content().bio }}</p>
+  <p class="bio">{{ homeData.bio }}</p>
 
   <mat-list class="links-list">
     <mat-list-item>
@@ -12,7 +12,7 @@
       >
         <fa-icon matListItemIcon [icon]="['fab', 'linkedin']"></fa-icon>
         <span class="link-text">LinkedIn</span>
-        <span class="hover-text">{{ content().linkedinDetails }}</span>
+        <span class="hover-text">{{ homeData.linkedinDetails }}</span>
       </a>
       <span matListItemMeta class="arrow-icon-container">
         <mat-icon class="default-icon">arrow_outward</mat-icon>
@@ -24,7 +24,7 @@
       <a matListItemLine href="https://github.com/gustavobarez" target="_blank">
         <fa-icon matListItemIcon [icon]="['fab', 'github']"></fa-icon>
         <span class="link-text">GitHub</span>
-        <span class="hover-text">{{ content().githubDetails }}</span>
+        <span class="hover-text">{{ homeData.githubDetails }}</span>
       </a>
       <span matListItemMeta class="arrow-icon-container">
         <mat-icon class="default-icon">arrow_outward</mat-icon>
@@ -35,8 +35,8 @@
     <mat-list-item>
       <a matListItemLine href="https://dev.to/gustavobarez" target="_blank">
         <fa-icon matListItemIcon [icon]="['fas', 'newspaper']"></fa-icon>
-        <span class="link-text">My Articles</span>
-        <span class="hover-text">{{ content().articlesDetails }}</span>
+        <span class="link-text">{{ homeData.viewArticles }}</span>
+        <span class="hover-text">{{ homeData.articlesDetails }}</span>
       </a>
       <span matListItemMeta class="arrow-icon-container">
         <mat-icon class="default-icon">arrow_outward</mat-icon>
@@ -61,7 +61,7 @@
       href="/caminho/para/cv.pdf"
       target="_blank"
     >
-      {{ content().cvButton }}
+      {{ homeData.cvButton }}
       <mat-icon>download</mat-icon>
     </a>
   </footer>
