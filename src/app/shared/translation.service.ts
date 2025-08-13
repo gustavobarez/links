@@ -21,16 +21,20 @@ export interface Project {
   description: string;
   technologies: string[];
   image?: string;
-  websiteLink?: string,
+  websiteLink?: string;
   codeLink: string;
+  viewWebsite: string;
+  viewCode: string;
 }
 
 export interface Article {
   id: number;
   title: string;
   summary: string;
+  categories: string[];
   image?: string;
   articleLink: string;
+  viewArticle: string;
 }
 
 @Injectable({

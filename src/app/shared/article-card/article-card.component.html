@@ -1,29 +1,29 @@
 <div class="project-card">
   <div class="card-header">
-    <span class="project-title">css2wind</span>
+    <span class="project-title">{{ article.title }}</span>
     <div class="project-tags">
-      <span class="tech-tag">#postgres</span>
-      <span class="tech-tag">#relacional</span>
-      <span class="tech-tag">#aggregate</span>
+      @for (category of article.categories; track category) {
+      <span class="tech-tag">{{ category }}</span>
+      }
     </div>
   </div>
 
   <div class="card-content">
     <p>
-      Learn TailwindCSS by playing a minigame: there are eight CSS properties
-      that you must translate to the equivalent TailwindCSS utility. Bet you
-      can't get 8/8.
+      {{ article.summary }}
     </p>
   </div>
 
+  @if (article.image) {
   <div class="card-image-container">
-    <img src="https://i.imgur.com/k9Hh5Yy.png" alt="Project Image" />
+    <img [src]="article.image" [alt]="article.title + ' Image'" />
   </div>
+  }
 
   <div class="card-actions">
     <a class="footer-button" href="#">
       <fa-icon [icon]="['fas', 'newspaper']"></fa-icon>
-      <span>View Article</span>
+      <span>{{ article.viewArticle }}</span>
     </a>
   </div>
 </div>

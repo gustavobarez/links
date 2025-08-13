@@ -16,14 +16,17 @@
         "technologies": ["TypeScript", "TailwindCSS", "Next.js"],
         "image": "https://i.imgur.com/k9Hh5Yy.png",
         "websiteLink": "https://css2wind.com",
-        "codeLink": "https://github.com/usuario/css2wind"
+        "viewWebsite": "Ver Website",
+        "codeLink": "https://github.com/usuario/css2wind",
+        "viewCode": "Ver Código"
       },
       {
         "id": 2,
         "title": "Outro Projeto",
         "description": "Descrição do outro projeto...",
         "technologies": ["Angular", "Node.js"],
-        "codeLink": "https://github.com/usuario/outro-projeto"
+        "codeLink": "https://github.com/usuario/outro-projeto",
+        "viewCode": "Ver Código"
       }
     ]
   },
@@ -34,7 +37,10 @@
         "id": 1,
         "title": "Como usar Angular Signals",
         "summary": "Guia completo sobre a nova funcionalidade do Angular",
-        "link": "https://medium.com/@usuario/angular-signals"
+        "categories": ["#relational", "#postgres", "#databases"],
+        "image": "https://i.imgur.com/k9Hh5Yy.png",
+        "articleLink": "https://medium.com/@usuario/angular-signals",
+        "viewArticle": "Ver Artigo"
       }
     ]
   }

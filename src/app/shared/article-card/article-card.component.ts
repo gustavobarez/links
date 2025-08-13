@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { Article } from '../translation.service';
 
 @Component({
   selector: 'app-article-card',
@@ -9,4 +10,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   templateUrl: './article-card.component.html',
   styleUrl: './article-card.component.scss',
 })
-export class ArticleCardComponent {}
+export class ArticleCardComponent {
+  @Input({ required: true }) article!: Article;
+}

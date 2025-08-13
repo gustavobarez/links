@@ -22,14 +22,14 @@
     @if (project.websiteLink) {
     <a class="footer-button" [href]="project.websiteLink" target="_blank">
       <fa-icon [icon]="['fas', 'earth-americas']"></fa-icon>
-      <span>Visit website</span>
+      <span>{{ project.viewWebsite }}</span>
     </a>
     <div class="vertical-separator"></div>
     }
 
     <a class="footer-button" [href]="project.codeLink" target="_blank">
       <fa-icon [icon]="['fas', 'code-branch']"></fa-icon>
-      <span>View code</span>
+      <span>{{ project.viewCode }}</span>
     </a>
   </div>
 </div>
