@@ -14,7 +14,7 @@
         "id": 1,
         "title": "Sinapse",
         "description": "Study smarter with AI: educational chatbot that imports your documents, transcribes audio, and answers questions based on your own materials. Bet you'll ace your exams!",
-        "technologies": ["Java", "Spring AI", "React"],
+        "technologies": ["Java", "Spring AI", "React", "RAG"],
         "image": "assets/sinapse.png"
       }
     ]

@@ -14,7 +14,7 @@
         "id": 1,
         "title": "Sinapse",
         "description": "Estude melhor com IA: chatbot educacional que importa seus documentos, transcreve áudeos e responde dúvidas baseado no seu próprio material. Aposte que vai tirar nota 10!",
-        "technologies": ["Java", "Spring AI", "React"],
+        "technologies": ["Java", "Spring AI", "React", "RAG"],
         "image": "assets/sinapse.png"
       }
     ]
