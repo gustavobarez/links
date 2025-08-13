@@ -11,22 +11,10 @@
     "items": [
       {
         "id": 1,
-        "title": "css2wind",
-        "description": "Aprenda TailwindCSS jogando um minigame: existem oito propriedades CSS que você deve traduzir para o utilitário TailwindCSS equivalente. Aposto que você não consegue 8/8.",
-        "technologies": ["TypeScript", "TailwindCSS", "Next.js"],
-        "image": "https://i.imgur.com/k9Hh5Yy.png",
-        "websiteLink": "https://css2wind.com",
-        "viewWebsite": "Ver Website",
-        "codeLink": "https://github.com/usuario/css2wind",
-        "viewCode": "Ver Código"
-      },
-      {
-        "id": 2,
-        "title": "Outro Projeto",
-        "description": "Descrição do outro projeto...",
-        "technologies": ["Angular", "Node.js"],
-        "codeLink": "https://github.com/usuario/outro-projeto",
-        "viewCode": "Ver Código"
+        "title": "Sinapse",
+        "description": "Estude melhor com IA: chatbot educacional que importa seus documentos, transcreve áudeos e responde dúvidas baseado no seu próprio material. Aposte que vai tirar nota 10!",
+        "technologies": ["Java", "Spring AI", "React"],
+        "image": "assets/sinapse.png"
       }
     ]
   },
@@ -35,8 +23,8 @@
     "items": [
       {
         "id": 1,
-        "title": "Como usar Angular Signals",
-        "summary": "Guia completo sobre a nova funcionalidade do Angular",
+        "title": "Bancos de Dados",
+        "summary": "O que aprendi sobre banco de dados relacional",
         "categories": ["#relational", "#postgres", "#databases"],
         "image": "https://i.imgur.com/k9Hh5Yy.png",
         "articleLink": "https://medium.com/@usuario/angular-signals",

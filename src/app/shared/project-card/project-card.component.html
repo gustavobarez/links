@@ -25,11 +25,11 @@
       <span>{{ project.viewWebsite }}</span>
     </a>
     <div class="vertical-separator"></div>
-    }
-
+    } @if (project.codeLink) {
     <a class="footer-button" [href]="project.codeLink" target="_blank">
       <fa-icon [icon]="['fas', 'code-branch']"></fa-icon>
       <span>{{ project.viewCode }}</span>
     </a>
+    }
   </div>
 </div>
