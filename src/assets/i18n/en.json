@@ -15,7 +15,9 @@
         "title": "Sinapse",
         "description": "Study smarter with AI: educational chatbot that imports your documents, transcribes audio, and answers questions based on your own materials. Bet you'll ace your exams!",
         "technologies": ["Java", "Spring AI", "React", "RAG"],
-        "image": "assets/sinapse.png"
+        "image": "assets/sinapse.png",
+        "viewCode": "View Code",
+        "codeLink": "https://github.com/gustavobarez/sinapse"
       }
     ]
   },
@@ -27,7 +29,7 @@
         "title": "Database Systems",
         "summary": "What I learned about relational databases",
         "categories": ["#relational", "#postgres", "#databases"],
-        "image": "https://i.imgur.com/k9Hh5Yy.png",
+        "image": "assets/database-logo.png",
         "articleLink": "https://medium.com/@usuario/angular-signals",
         "viewArticle": "View Article"
       }
